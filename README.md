@@ -2,13 +2,18 @@
 
 Use the code below for Frontend Testing
 
+```
 <!DOCTYPE html>
-<head>
-    <title>File Upload</title>
-    <script src="https://cdn.jsdelivr.net/npm/resumablejs@1.1.0/resumable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>File Upload</title>
+        <script src="https://cdn.jsdelivr.net/npm/resumablejs@1.1.0/resumable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+<body>
 
 <div class="container pt-4">
     <div class="row justify-content-center">
@@ -20,7 +25,7 @@ Use the code below for Frontend Testing
 
                 <div class="card-body">
                     <div id="upload-container" class="text-center">
-                        <button id="browseFile" class="btn btn-primary">Brows File</button>
+                        <button id="browseFile" class="btn btn-primary">Browse File</button>
                     </div>
                     <div  style="display: none" class="progress mt-3" style="height: 25px">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; height: 100%">75%</div>
@@ -34,9 +39,10 @@ Use the code below for Frontend Testing
         </div>
     </div>
 </div>
+</body>
 
 <script type="text/javascript">
-    const baseURL = 'file-upload-app-production.up.railway.app';
+    const baseURL = 'https://file-upload-app-production.up.railway.app';
     let browseFile = $('#browseFile');
     let resumable = new Resumable({
         target: baseURL + '/api/upload',
@@ -88,3 +94,4 @@ Use the code below for Frontend Testing
         progress.hide();
     }
 </script>
+```
